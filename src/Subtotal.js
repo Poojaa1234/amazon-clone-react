@@ -7,7 +7,7 @@ import { useHistory } from 'react-router';
 
 export default function Subtotal() {
     const history = useHistory();
-    const[{basket},dispatch]=useStateValue();
+    const[{basket}]=useStateValue();
     return (
         <div className="subtotal">
         <CurrencyFormat

@@ -39,11 +39,11 @@ export default function Payment({id,image,title,price,rating}) {
     }, [basket]);
 
     console.log("The secret is ",clientSecret)
-    console.log("User is",user.uid)
     
     const handleSubmit = async (event)=>{
         event.preventDefault();
         setProcessing(true);
+    
 
         const payload = await stripe.confirmCardPayment(clientSecret,
             {
